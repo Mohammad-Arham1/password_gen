@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+        <div class="password-display">
+            <input type="text" id="password" readonly placeholder="Generate a strong password">
+            <button id="copy-button" aria-label="Copy to clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="length-control">
+            <div class="length-header">
+                <label for="length">Password Length</label>
+                <span id="length-value">12</span>
+            </div>
+            <input type="range" id="length" min="8" max="20" value="12">
+        </div>
+        <div class="options">
+            <label class="checkbox-container">
+                <input type="checkbox" id="uppercase" checked>
+                <span class="checkmark"></span>
+                Include Uppercase (A-Z)
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="lowercase" checked>
+                <span class="checkmark"></span>
+                Include Lowercase (a-z)
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="numbers" checked>
+                <span class="checkmark"></span>
+                Include Numbers (0-9)
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="symbols" checked>
+                <span class="checkmark"></span>
+                Include Symbols (#*!@)
+            </label>
+        </div>
+        <button class="generate-button" id="generate">GENERATE</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
